@@ -1,19 +1,14 @@
 import React from "react";
 
-const Links = ({user}) => {
-
+const Links = (props) => {
     return (
-        <div>
+        <div id="links">
             <h3>Links</h3>
-            {user && user.links &&
-                <div>
-                     <a href={user.links.github}>{user.links.github}</a>
-                    <a href={user.links.linkedin}>{user.links.linkedin}</a>
-                </div>
-             }
+            <a href={props.github}>{props.github}</a>
+            <a href={props.linkedin}>{props.linkedin}</a>
+            {/* <a href={props.links.linkedin}>{props.links.linkedin}</a> */}
         </div>
     )
 }
 
-
-export default Links
+export default Links;
